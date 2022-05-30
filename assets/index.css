@@ -1,0 +1,226 @@
+    #search-box {
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    }
+
+    #search-form
+    {
+    height: 40px;
+    border: 1px solid #999;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 8px 6px -10px #FF7F50;
+    }
+
+    #pick-up
+    {
+    font-size: 14px;
+    color: #ddd;
+    border-width: 0;
+    background: transparent;
+    }
+
+    
+    #search-box input[type="text"]
+    {
+    width: 90%;
+    padding: 11px 0 12px 1em;
+    color: #333;
+    outline: none;
+    }
+
+    #search-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* height: 40px; */
+    height: -webkit-fill-available;
+    width: 50px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    line-height: 42px;
+    border-width: 0;
+    /* background-color:#FF7F50; */
+    background-image: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%);
+    -webkit-border-radius: 0px 5px 5px 0px;
+    -moz-border-radius: 0px 5px 5px 0px;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    }
+
+    
+    /* If the browser window is 600px or larger */
+    @media only screen and (min-width: 900px) {
+        #search-box {
+            width: 35%;
+            }
+        .secondSearchBox{
+            padding-top:2.5%;
+        }
+
+        .dropdown-container {
+            width: 35%; /* We use this so that it matches perfectly with the the search bars above */
+
+        }
+
+    }
+
+/* ********************* */
+/* This Code is for only the floating card in right bottom corner */
+/* ********************** */
+
+/* Overlapping Layout With CSS Flex Box
+https://www.youtube.com/watch?v=_HTL0XSMcRQ&list=PL3CQ2dylu_2zkP_YtHhe8e5wcpiSS_yH5&index=136&t=17s
+https://codepen.io/Web_Cifar/pen/dyXNVep
+https://codepen.io/FlorinPop17/pen/OJJKQeK
+*/
+
+
+    @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+    * {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+
+    #automatic-current-location-container-sidebox {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    overflow-x: clip;
+    width: 300px;
+    font-size: 16px;
+    }
+    #automatic-current-location-container-sidebox p {
+    padding: 0;
+    margin: 0;
+    }
+    #automatic-current-location-container {
+    --color-1: #17bcb4;
+    --color-2: #24252a;
+    --color-3: #244044;
+    --color-4: #f3f8f7;
+    display: inline-block;
+    border:2PX SOLID;
+    padding: 17px 17px;
+    border-radius: 6px;
+    font-family: "Roboto Mono", monospace;
+    text-align: center;
+    transform: translate(calc(100% + 5px), -50%);
+    -webkit-transition: 0.5s ease-out transform;
+    transition: 0.5s ease-out transform;
+    z-index: 4;
+    position: fixed;
+    right: 0%;
+    top: 50%;
+    left: 50%;
+    }
+
+    #automatic-current-location-container.active {
+    /* https://blog.hubspot.com/website/center-div-css How to Center a Div Horizontally and Vertically */
+    transform: translate(-50%, -50%);
+    left: 50%;
+
+    }
+
+    #automatic-current-location-container .logo {
+    font-size: 25px;
+    }
+
+    #automatic-current-location-container .author {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    }
+
+    #automatic-current-location-container .author span {
+    background-color: var(--color-3);
+    padding: 3px;
+    border-radius: 4px;
+    }
+
+    #automatic-current-location-container .items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    }
+
+    #automatic-current-location-container .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+    border-radius: 4px;
+    text-align: left;
+    }
+
+    #automatic-current-location-container .item:hover {
+    background-color: var(--color-3);
+    }
+
+    #automatic-current-location-container svg {
+    max-width: 20px;
+    }
+
+    #automatic-current-location{
+        padding: 0.75rem 1.5rem;
+        border-radius: 3rem;
+        background: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%);
+        /* font-size: 2vmin; */
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--color-4);
+    }
+
+    #automatic-current-location:hover{
+        color:#fe5f75;
+        background: #fff;
+        transition: 0.3s;
+        box-shadow: 2px 2px 30px rgb(0 0 0 / 20%) !important;
+    }
+
+    #automatic-current-location-container .close {
+    position: absolute;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    right: 5px;
+    top: 5px;
+    padding: 5px;
+    padding: 5px;
+    color:white;   
+    background: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%);
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    }
+
+    @media only screen and (max-width: 450px) {
+        #automatic-current-location-container{
+            width:300px;
+        }   
+    }
